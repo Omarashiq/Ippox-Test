@@ -1,0 +1,1024 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="IppoX delivers professional IT support, infrastructure, cybersecurity and technology solutions.">
+<title>IppoX — Technology & IT Solutions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue: #155eef;
+    --dark: #101828;
+    --text: #344054;
+    --muted: #667085;
+    --line: #e4e7ec;
+    --light: #f7f9fc;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background: white;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+    width: min(1240px, 90%);
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid var(--line);
+}
+
+nav {
+    height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.logo span { color: var(--blue); }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #475467;
+    transition: .2s;
+}
+
+.nav-links a:hover { color: var(--blue); }
+
+.nav-cta {
+    background: var(--blue);
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+
+.nav-cta:hover { background: #0046ca; }
+
+.menu {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    padding: 90px 0 85px;
+    background: #fff;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.overline {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(43px, 5.4vw, 68px);
+    letter-spacing: -3.8px;
+    line-height: 1.12;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 span { color: var(--blue); }
+
+.hero-copy {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 510px;
+    margin-bottom: 32px;
+}
+
+.actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--blue);
+    transition: .2s;
+}
+
+.btn-blue {
+    color: white;
+    background: var(--blue);
+}
+
+.btn-blue:hover { background: #0046ca; }
+
+.btn-white {
+    color: var(--dark);
+    border-color: #d0d5dd;
+}
+
+.btn-white:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.hero-image {
+    height: 475px;
+    overflow: hidden;
+    background: #e9eef5;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INTRO STRIP */
+
+.intro-strip {
+    background: var(--dark);
+    color: white;
+    padding: 32px 0;
+}
+
+.intro-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.intro-inner strong {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.intro-inner p {
+    font-size: 13px;
+    color: #c4cbd5;
+    max-width: 470px;
+}
+
+/* SECTIONS */
+
+section.content-section {
+    padding: 105px 0;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 48px;
+}
+
+.section-top h2,
+.about-copy h2,
+.contact-copy h2 {
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.18;
+    letter-spacing: -2px;
+    font-weight: 650;
+}
+
+.section-description {
+    color: var(--muted);
+    max-width: 440px;
+    font-size: 14px;
+}
+
+/* SERVICES */
+
+.services { background: var(--light); }
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #dfe4ec;
+    border-left: 1px solid #dfe4ec;
+}
+
+.service-card {
+    min-height: 245px;
+    padding: 30px;
+    border-right: 1px solid #dfe4ec;
+    border-bottom: 1px solid #dfe4ec;
+    background: white;
+    transition: .2s;
+}
+
+.service-card:hover {
+    background: #f0f5ff;
+}
+
+.service-number {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.service-card h3 {
+    font-size: 19px;
+    letter-spacing: -.5px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.service-link {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 85px;
+    align-items: center;
+}
+
+.about-image {
+    height: 480px;
+    overflow: hidden;
+    background: #e9eef5;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-copy h2 { margin-bottom: 25px; }
+
+.about-copy > p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.about-points {
+    margin-top: 30px;
+    border-top: 1px solid var(--line);
+}
+
+.about-point {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about-point span {
+    color: var(--blue);
+    margin-right: 12px;
+}
+
+/* APPROACH */
+
+.approach { background: var(--light); }
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.approach-card {
+    border-top: 2px solid var(--blue);
+    padding-top: 25px;
+}
+
+.approach-card .number {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #c5d5f5;
+    margin-bottom: 15px;
+}
+
+.approach-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.approach-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* CONTACT BANNER */
+
+.contact-banner {
+    background: #155eef;
+    color: white;
+    padding: 75px 0;
+}
+
+.banner-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.banner-inner h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    letter-spacing: -1.8px;
+    line-height: 1.2;
+}
+
+.banner-inner p {
+    margin-top: 12px;
+    color: #dce7ff;
+    font-size: 14px;
+}
+
+.banner-inner .btn {
+    color: white;
+    border-color: white;
+    white-space: nowrap;
+}
+
+.banner-inner .btn:hover {
+    background: white;
+    color: var(--blue);
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 90px;
+}
+
+.contact-copy p {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.contact-detail {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.contact-detail strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-detail span { color: var(--muted); }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.field { margin-bottom: 20px; }
+
+.field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    border: 1px solid #d0d5dd;
+    border-radius: 3px;
+    padding: 14px;
+    font: inherit;
+    font-size: 13px;
+    outline: none;
+    background: white;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: var(--blue);
+}
+
+.field textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.submit {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* FOOTER */
+
+footer {
+    background: #101828;
+    color: white;
+    padding: 60px 0 25px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 45px;
+}
+
+.footer-brand p {
+    color: #98a2b3;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.footer-column h4 {
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.footer-column a {
+    display: block;
+    color: #98a2b3;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.footer-column a:hover { color: white; }
+
+.footer-bottom {
+    padding-top: 22px;
+    border-top: 1px solid #344054;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #98a2b3;
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .hero-grid { gap: 35px; }
+    .about-grid { gap: 40px; }
+    .contact-grid { gap: 45px; }
+}
+
+@media(max-width: 700px) {
+    .menu { display: block; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 25px 5%;
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .nav-links.active { display: flex; }
+
+    .hero { padding: 60px 0; }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image { height: 330px; }
+
+    .intro-inner,
+    .section-top,
+    .banner-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .service-grid { grid-template-columns: 1fr 1fr; }
+
+    .approach-grid { grid-template-columns: 1fr; gap: 30px; }
+
+    .about-image { height: 330px; }
+
+    .footer-main { flex-wrap: wrap; }
+
+    section.content-section { padding: 75px 0; }
+}
+
+@media(max-width: 450px) {
+    .service-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .footer-bottom { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a class="logo" href="#">Ippo<span>X</span></a>
+
+            <button class="menu" id="menu" aria-label="Open menu">☰</button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#services">Our Services</a>
+                <a href="#about">About IppoX</a>
+                <a href="#approach">Our Approach</a>
+                <a href="#contact" class="nav-cta">Contact Us →</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-grid">
+
+            <div>
+                <div class="overline">IT Services & Technology Solutions</div>
+
+                <h1>
+                    Technology is essential.
+                    <span>We make it work.</span>
+                </h1>
+
+                <p class="hero-copy">
+                    Reliable technical support and intelligent IT solutions
+                    that help businesses operate, connect and move forward
+                    with confidence.
+                </p>
+
+                <div class="actions">
+                    <a href="#contact" class="btn btn-blue">Speak to Our Team →</a>
+                    <a href="#services" class="btn btn-white">Explore Our Services</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
+                    alt="Modern professional technology workspace">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- INTRO -->
+
+<div class="intro-strip">
+    <div class="container intro-inner">
+        <strong>Technology. Support. Solutions.</strong>
+        <p>
+            Helping organisations make better use of technology
+            through practical expertise and dependable support.
+        </p>
+    </div>
+</div>
+
+<!-- SERVICES -->
+
+<section class="content-section services" id="services">
+    <div class="container">
+
+        <div class="section-top">
+            <div>
+                <div class="overline">Our Capabilities</div>
+                <h2>Technology services<br>for modern businesses.</h2>
+            </div>
+
+            <p class="section-description">
+                We provide technical services across the systems,
+                infrastructure and platforms businesses depend on.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <article class="service-card">
+                <div class="service-number">01 / SUPPORT</div>
+                <h3>IT Support & Maintenance</h3>
+                <p>
+                    Technical troubleshooting, system maintenance,
+                    device configuration and ongoing IT assistance.
+                </p>
+                <a href="#contact" class="service-link">Enquire about this service →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-number">02 / INFRASTRUCTURE</div>
+                <h3>Network & Infrastructure</h3>
+                <p>
+                    Network implementation, connectivity,
+                    infrastructure management and optimisation.
+                </p>
+                <a href="#contact" class="service-link">Enquire about this service →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-number">03 / SECURITY</div>
+                <h3>Cybersecurity</h3>
+                <p>
+                    Security assessments, system protection
+                    and practical digital security solutions.
+                </p>
+                <a href="#contact" class="service-link">Enquire about this service →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-number">04 / SYSTEMS</div>
+                <h3>Hardware & Software</h3>
+                <p>
+                    Installation, configuration, upgrades
+                    and technical support for business systems.
+                </p>
+                <a href="#contact" class="service-link">Enquire about this service →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-number">05 / CLOUD</div>
+                <h3>Cloud Technology</h3>
+                <p>
+                    Cloud deployment, digital infrastructure
+                    and support for connected working environments.
+                </p>
+                <a href="#contact" class="service-link">Enquire about this service →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-number">06 / CONSULTING</div>
+                <h3>IT Consulting</h3>
+                <p>
+                    Technology planning, technical recommendations
+                    and guidance for business requirements.
+                </p>
+                <a href="#contact" class="service-link">Enquire about this service →</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="content-section" id="about">
+    <div class="container">
+        <div class="about-grid">
+
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+                    alt="Professionals collaborating in a modern office">
+            </div>
+
+            <div class="about-copy">
+                <div class="overline">Who We Are</div>
+
+                <h2>Practical technology. Professional support.</h2>
+
+                <p>
+                    IppoX is a technology support and solutions brand
+                    focused on helping customers navigate their
+                    technical requirements.
+                </p>
+
+                <p>
+                    We believe that effective technology is not
+                    simply about having the latest equipment.
+                    It is about having the right systems, the right
+                    solutions and the right support.
+                </p>
+
+                <div class="about-points">
+                    <div class="about-point">
+                        <span>01</span> A customer-focused approach
+                    </div>
+                    <div class="about-point">
+                        <span>02</span> Practical technical solutions
+                    </div>
+                    <div class="about-point">
+                        <span>03</span> Commitment to quality
+                    </div>
+                    <div class="about-point">
+                        <span>04</span> Forward-thinking technology
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- APPROACH -->
+
+<section class="content-section approach" id="approach">
+    <div class="container">
+
+        <div class="section-top">
+            <div>
+                <div class="overline">How We Work</div>
+                <h2>A clear approach.<br>Solutions that matter.</h2>
+            </div>
+
+            <p class="section-description">
+                Every engagement starts with understanding
+                the problem and identifying the right way forward.
+            </p>
+        </div>
+
+        <div class="approach-grid">
+
+            <div class="approach-card">
+                <div class="number">01</div>
+                <h3>Understand the Requirement</h3>
+                <p>
+                    We begin by understanding your business,
+                    technical challenges and objectives.
+                </p>
+            </div>
+
+            <div class="approach-card">
+                <div class="number">02</div>
+                <h3>Identify the Solution</h3>
+                <p>
+                    We assess the requirements and determine
+                    an appropriate technical approach.
+                </p>
+            </div>
+
+            <div class="approach-card">
+                <div class="number">03</div>
+                <h3>Support & Deliver</h3>
+                <p>
+                    We work towards implementing the solution
+                    and providing the necessary technical support.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT BANNER -->
+
+<section class="contact-banner">
+    <div class="container banner-inner">
+        <div>
+            <h2>Let's move your technology forward.</h2>
+            <p>Have a requirement? Let's discuss how IppoX can help.</p>
+        </div>
+
+        <a href="#contact" class="btn">Start a Conversation →</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="content-section" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+
+            <div class="contact-copy">
+                <div class="overline">Contact IppoX</div>
+                <h2>Let's talk about your requirements.</h2>
+
+                <p>
+                    Whether you need technical assistance,
+                    a technology solution or simply want to
+                    discuss a project, we'd be pleased to hear from you.
+                </p>
+
+                <div class="contact-detail">
+                    <strong>Technical Support</strong>
+                    <span>Submit your technical enquiry using the form.</span>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Business Enquiries</strong>
+                    <span>Discuss your technology requirements with our team.</span>
+                </div>
+            </div>
+
+            <form id="contactForm">
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="name">Full Name</label>
+                        <input id="name" required placeholder="Your name">
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Business Email</label>
+                        <input id="email" type="email" required placeholder="you@company.com">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="company">Company / Organisation</label>
+                    <input id="company" placeholder="Company name (optional)">
+                </div>
+
+                <div class="field">
+                    <label for="service">Area of Interest</label>
+                    <select id="service" required>
+                        <option value="">Select a service</option>
+                        <option>IT Support & Maintenance</option>
+                        <option>Network & Infrastructure</option>
+                        <option>Cybersecurity</option>
+                        <option>Hardware & Software</option>
+                        <option>Cloud Technology</option>
+                        <option>IT Consulting</option>
+                        <option>General Enquiry</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="message">How Can We Help?</label>
+                    <textarea id="message" required placeholder="Tell us about your requirements..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-blue submit">
+                    Send Enquiry →
+                </button>
+
+                <p id="formStatus" style="font-size:12px;color:#155eef;margin-top:12px;" role="status"></p>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <a class="logo" href="#">Ippo<span>X</span></a>
+                <p>Technology. Support. Solutions.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="#about">About IppoX</a>
+                <a href="#services">Our Services</a>
+                <a href="#approach">Our Approach</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Services</h4>
+                <a href="#services">IT Support</a>
+                <a href="#services">Infrastructure</a>
+                <a href="#services">Cybersecurity</a>
+                <a href="#services">Cloud Solutions</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Get In Touch</h4>
+                <a href="#contact">Contact Us</a>
+                <a href="#contact">Technical Enquiries</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 IppoX. All rights reserved.</span>
+            <span>Technology. Support. Solutions.</span>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const company = document.getElementById("company").value;
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value;
+
+    const subject = encodeURIComponent("IppoX Enquiry: " + service);
+
+    const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\nCompany: " + company +
+        "\nService: " + service +
+        "\n\nMessage:\n" + message
+    );
+
+    const supportEmail = "support@ippox.com";
+
+    document.getElementById("formStatus").textContent =
+        "Opening your email application...";
+
+    window.location.href =
+        "mailto:" + supportEmail +
+        "?subject=" + subject +
+        "&body=" + body;
+});
+</script>
+
+</body>
+</html>
